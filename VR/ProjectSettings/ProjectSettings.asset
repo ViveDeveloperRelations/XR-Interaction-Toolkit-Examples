@@ -128,9 +128,6 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 11400000, guid: c73b900e4bace6d4db2eee9dbcce6484, type: 2}
   - {fileID: 518808487471112657, guid: df8aae105e263a5468e482f51411abfe, type: 2}
-  - {fileID: 11400000, guid: 2225792b9b8a25c4f836b693146f8144, type: 2}
-  - {fileID: 8991177285536209095, guid: 12fb2884f45e57a48a232b374653f4dd, type: 2}
-  - {fileID: 11400000, guid: f3d36b094c7e90a48bfeecc8253553a0, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -249,7 +246,7 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   templatePackageId: 
   templateDefaultScene: 
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{inproject}: '
@@ -683,7 +680,8 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: ENABLE_INPUT_SYSTEM_TESTFRAMEWORK_TESTS
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
