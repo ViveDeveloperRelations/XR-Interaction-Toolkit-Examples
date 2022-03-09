@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.htc.upm.wave.essence": "4.3.0-r.5",
     "com.htc.upm.wave.native": "4.3.0-r.5",
     "com.htc.upm.wave.xrsdk": "4.3.0-r.5",
     "com.unity.collab-proxy": "1.8.0",
