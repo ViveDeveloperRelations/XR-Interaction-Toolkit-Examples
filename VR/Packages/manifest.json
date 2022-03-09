@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.htc.upm.wave.native": "4.3.0-r.5",
     "com.htc.upm.wave.xrsdk": "4.3.0-r.5",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
@@ -16,7 +17,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.arsubsystems": "2.1.18",
     "com.unity.xr.interaction.toolkit": "2.0.0",
-    "com.unity.xr.management": "4.0.1",
+    "com.unity.xr.management": "4.0.7",
     "com.unity.xr.oculus": "1.8.1",
     "com.unity.xr.windowsmr": "2.8.0",
     "com.unity.modules.ai": "1.0.0",
