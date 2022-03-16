@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using Wave.OpenXR;
 using Random = UnityEngine.Random;
 
 public class TestBuilder
