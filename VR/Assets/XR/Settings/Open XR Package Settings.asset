@@ -471,5 +471,3 @@ MonoBehaviour:
   company: HTC
   priority: 0
   required: 0
-  enableHandTracking: 0
-  enableTracker: 0

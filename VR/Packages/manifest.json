@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.htc.upm.wave.openxr": "0.8.0-preview.1",
+    "com.htc.upm.wave.openxr": "1.0.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ads": "3.7.5",
