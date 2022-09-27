@@ -1,0 +1,107 @@
+# CI for pull requests
+# https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle?learn=continuous_integration&learnProduct=actions
+# Using gradle-build-action. See https://github.com/gradle/gradle-build-action
+
+name: CI
+
+on: [pull_request,workflow_dispatch]
+  
+#  push:
+#    branches:
+#      - 'build'
+#      #- 'releases/**'
+#      #- '!releases/**-alpha'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      UPM_PACKAGE_CREDENTIAL_UPMCONFIG_TOML: ${{ secrets.UPM_PACKAGE_CREDENTIAL_UPMCONFIG_TOML }}
+    strategy:
+      matrix:
+        unity-version-matrix: [ 2020.3.30f1, 2021.2.14f1, 2022.1.0b14 ] #2019.4.36f1,
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+#not great, but let's also set up java so we can run sdkmanager. probably a way to avoid this.
+      #https://github.com/marketplace/actions/setup-unity
+      #possible modules on linux - android,ios,webgl,linux-il2cpp,mac-mono,windows-mono 
+      - name: Setup Unity
+        uses: kuler90/setup-unity@v1
+        with:
+          unity-version: ${{ matrix.unity-version-matrix }}
+          unity-modules: android
+          install-path: /opt/Unity
+#need 2fa to not error out I think
+      - name: Activate Unity
+        continue-on-error: true 
+        uses: kuler90/activate-unity@v1
+        with:
+          unity-username: ${{ secrets.UNITY_USERNAME }}
+          unity-password: ${{ secrets.UNITY_PASSWORD }}
+      - name: list all files in current dir
+        run: |
+          find .    
+      - name: environment tests
+        run: |
+          echo $UNITY_PATH 
+          find $UNITY_PATH 
+          echo $ANDROID_HOME
+          echo $ANDROID_NDK_HOME
+          echo $NDK_HOME
+          echo $JAVA_HOME
+          echo ${{ matrix.unity-version-matrix }}
+          echo env UNITY_PATH: ${{ env.UNITY_PATH }}
+
+#        https://stackoverflow.com/questions/46402772/failed-to-install-android-sdk-java-lang-noclassdeffounderror-javax-xml-bind-a
+      - name: accept licenses if not already done
+        continue-on-error: true 
+        run: |
+          echo "y" | /opt/Unity/${{ matrix.unity-version-matrix }}/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --sdk_root="/opt/Unity/${{ matrix.unity-version-matrix }}/Editor/Data/PlaybackEngines/AndroidPlayer/SDK" --licenses
+      - name: list all files in unity install dir
+        run: |
+          find /opt/Unity/
+      #- run:
+      #  name: accept licenses
+      #  command: |
+      #    echo "y" | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
+      #https://docs.unity3d.com/Manual/EditorCommandLineArguments.html
+
+      - name: Build Unity
+        uses: kuler90/build-unity@v1
+        continue-on-error: true 
+        with:
+          build-target: Android
+          build-method: TestBuilder.Build
+          project-path: ${{ github.workspace }}/VR/
+
+#return license failed - "activated manually for this computer and can't be returned"  https://github.com/hardcoded2/WavePassthroughOverlayExample/runs/5540616684?check_suite_focus=true#step:9:79
+#feels wrong not to do it... just ignore the error code i guess?
+
+#not sure if needed with kuler90 plugin
+#      - name: return license
+#        continue-on-error: true 
+#        run: |
+#          /opt/Unity/${{ matrix.unity-version-matrix }}/Editor/Unity -quit -batchMode -logFile -noGraphics -returnlicense || exit 0
+      - name: list all files 
+        run: |
+          find .
+      - name: list all files in build dir
+        run: |
+          find VR/Builds/
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build${{ matrix.unity-version-matrix}}_${{github.run_id}}_${{github.run_number}}_${{github.run_attempt}}
+          retention-days: 30
+          path: |
+            VR/Builds/*.apk
+
+#      - name: 'Upload Artifact'
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: build${{ github.run_number }}
+#          path: Builds/*apk
