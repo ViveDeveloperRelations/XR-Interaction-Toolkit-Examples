@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.htc.upm.wave.openxr": "1.0.2",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ads": "3.6.1",
@@ -52,5 +53,14 @@
   "testables": [
     "com.unity.inputsystem",
     "com.unity.xr.interaction.toolkit"
+  ],
+  "scopedRegistries": [
+    {
+      "name": "VIVE",
+      "url": "https://npm-registry.vive.com",
+      "scopes": [
+        "com.htc.upm"
+      ]
+    }
   ]
 }
