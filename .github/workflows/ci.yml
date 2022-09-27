@@ -19,7 +19,7 @@ jobs:
       UPM_PACKAGE_CREDENTIAL_UPMCONFIG_TOML: ${{ secrets.UPM_PACKAGE_CREDENTIAL_UPMCONFIG_TOML }}
     strategy:
       matrix:
-        unity-version-matrix: [ 2020.3.30f1, 2021.2.14f1, 2022.1.0b14 ] #2019.4.36f1,
+        unity-version-matrix: [ 2020.3.38f1, 2021.2.14f1, 2022.1.0b14 ] #2019.4.36f1,
 
     steps:
       - name: Checkout Code
