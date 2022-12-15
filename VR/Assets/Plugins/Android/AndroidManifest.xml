@@ -33,5 +33,6 @@
     <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
 
     <uses-feature android:name="wave.feature.handtracking" android:required="true" />
+	<uses-feature android:name="wave.feature.eyetracking" android:required="true" />
 </manifest>
 

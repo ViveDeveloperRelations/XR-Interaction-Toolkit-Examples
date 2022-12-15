@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "com.htc.upm.wave.native": "4.3.0-r.5",
-    "com.htc.upm.wave.xrsdk": "4.3.0-r.5",
+    "com.htc.upm.wave.essence": "file:C:/Users/marcus_nixon/OneDrive - Default Directory/Documents/Wave Releases/ViveWaveUnity_BetaRelease/ViveWaveUnity_ScenePerceptionBetaRelease/com.htc.upm.wave.essence-5.0.4-r.5.1.tgz",
+    "com.htc.upm.wave.native": "file:C:/Users/marcus_nixon/OneDrive - Default Directory/Documents/Wave Releases/ViveWaveUnity_BetaRelease/ViveWaveUnity_ScenePerceptionBetaRelease/com.htc.upm.wave.native-5.0.4-r.5.1.tgz",
+    "com.htc.upm.wave.xrsdk": "file:C:/Users/marcus_nixon/OneDrive - Default Directory/Documents/Wave Releases/ViveWaveUnity_BetaRelease/ViveWaveUnity_ScenePerceptionBetaRelease/com.htc.upm.wave.xrsdk-5.0.4-r.5.1.tgz",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.ide.rider": "3.0.15",
     "com.unity.ide.visualstudio": "2.0.16",
@@ -10,7 +11,7 @@
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
-    "com.unity.xr.interaction.toolkit": "2.0.2",
+    "com.unity.xr.interaction.toolkit": "2.2.0",
     "com.unity.xr.management": "4.2.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
