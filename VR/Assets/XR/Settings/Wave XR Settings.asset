@@ -19,7 +19,7 @@ MonoBehaviour:
   adaptiveQualityMode: 2
   AQ_SendQualityEvent: 1
   AQ_AutoFoveation: 1
-  useAQDynamicResolution: 0
+  useAQDynamicResolution: 1
   DR_DefaultIndex: 0
   DR_TextSize: 20
   DR_ResolutionScaleList:
@@ -39,13 +39,21 @@ MonoBehaviour:
   debugLogFlagForNative: 1048335
   debugLogFlagForUnity: 1048335
   overrideLogFlagForNative: 0
+  useCMPChecker: 0
   amcMode: 0
   amcModeConfirm: 0
+  fadeOut: 0
+  enableFSE: 0
+  FSE_Level: 0.5
   supportedFPS: 0
   waveXRFolder: Assets/Wave/XR
   waveEssenceFolder: Assets/Wave/Essence
   displayGamutPreferences: 000000000100000002000000
   enableAutoFallbackForMultiLayer: 1
+  allowSpectatorCamera: 1
   EnableTracker: 0
   EnableNaturalHand: 0
   EnableElectronicHand: 0
+  EnableEyeExpression: 0
+  EnableEyeTracking: 0
+  EnableLipExpression: 0
