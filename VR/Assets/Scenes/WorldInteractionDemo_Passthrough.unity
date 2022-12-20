@@ -5183,7 +5183,6 @@ MonoBehaviour:
   scenePerceptionManager: {fileID: 1452617109}
   RoomPanelMeshRenderers:
   - {fileID: 914383687}
-  - {fileID: 914383687}
   DemoRoomMaterialOpaque: {fileID: 2100000, guid: 5ed089f3573c9f44fa380e9e6ae9f193,
     type: 2}
   DemoRoomMaterialTransparent: {fileID: 2100000, guid: c8035e4f8de47e14fbb2b9f6cd338b50,
@@ -5191,8 +5190,8 @@ MonoBehaviour:
   GeneratedMeshMaterialTranslucent: {fileID: 2100000, guid: b0e2136222c18364894daabc3a3dd31d,
     type: 2}
   hmd: {fileID: 1210370386}
-  leftController: {fileID: 6232745470614056082}
-  rightController: {fileID: 1696888688}
+  leftController: {fileID: 6232745470614056083}
+  rightController: {fileID: 6232745470614056082}
   AnchorPrefab: {fileID: 6137973343519671895, guid: b727ac42c429ced43a68ab619e714014,
     type: 3}
   AnchorDisplayPrefab: {fileID: 6137973343519671895, guid: 0c87a5379eca0c642a8a804630e46fca,
@@ -5605,6 +5604,10 @@ PrefabInstance:
     - target: {fileID: 132536, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Name
       value: IngameDebugConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 132536, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11440770, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -6236,12 +6239,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4257412417454173056, guid: ed79eaa9dbed71a46b42588537c577a7,
     type: 3}
   m_PrefabInstance: {fileID: 898393205}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1696888688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 502342290, guid: ecdbf3dc6204e7a46943712ecfb94c12,
-    type: 3}
-  m_PrefabInstance: {fileID: 6232745470614056081}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707976571
 GameObject:
@@ -11018,6 +11015,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202364692, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_DirectionalAnchorRotationAction.m_Action.m_Id
+      value: be932de5-e948-480c-99d4-6da42c34f415
+      objectReference: {fileID: 0}
+    - target: {fileID: 202364692, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_DirectionalAnchorRotationAction.m_Action.m_Name
+      value: Directional Anchor Rotation
+      objectReference: {fileID: 0}
     - target: {fileID: 1670256628, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
       propertyPath: m_DirectionalAnchorRotationAction.m_Action.m_Id
       value: 54d4d98b-d178-47e4-b9e6-4b250b7c705d
@@ -11105,7 +11110,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
 --- !u!1 &6232745470614056082 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 705080845, guid: ecdbf3dc6204e7a46943712ecfb94c12,
+  m_CorrespondingSourceObject: {fileID: 1670256624, guid: ecdbf3dc6204e7a46943712ecfb94c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 6232745470614056081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6232745470614056083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202364687, guid: ecdbf3dc6204e7a46943712ecfb94c12,
     type: 3}
   m_PrefabInstance: {fileID: 6232745470614056081}
   m_PrefabAsset: {fileID: 0}
