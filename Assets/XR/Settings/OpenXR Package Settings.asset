@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec058e82c4fd831488e0fe81bb41d440, type: 3}
   m_Name: ViveHandInteraction Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: VIVE XR Hand Interaction
   version: 1.0.0
   featureIdInternal: vive.wave.openxr.feature.hand.interaction
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c438b3d1db2d7e4fb133eab8345e6bb, type: 3}
   m_Name: ViveWristTracker Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: VIVE XR Wrist Tracker
   version: 1.0.0
   featureIdInternal: vive.wave.openxr.feature.tracker
